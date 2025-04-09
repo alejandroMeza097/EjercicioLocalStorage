@@ -12,16 +12,17 @@ function eliminarInformacion(){
 }
 
 
-//VALIDACION DEL LOCALSTORAGE...
+//VALIDACION DE LA INFORMACION DEL LOCALSTORAGE...
 let placeholder = document.getElementById("placeholder-usuario");
 
 if(localStorage.getItem("usuario") != null){
     
     let nombre = localStorage.getItem("usuario");
-    placeholder.innerText = `Hola, ${nombre}, bienvenida/o de nuevo.`;
-    
+   
     if(nombre === ""){
         placeholder.innerText = `Por favor ve a index e ingresa tu nombre`; 
+    }else{
+        placeholder.innerText = `Hola, ${nombre}, bienvenida/o de nuevo.`;
     }
     
     
